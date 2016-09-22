@@ -10,12 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".mvp.view.MainActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="缓存测试"
-        android:id="@+id/btn_cache"/>
-
     <EditText
         android:id="@+id/ext_ipaddress"
         android:layout_width="match_parent"
