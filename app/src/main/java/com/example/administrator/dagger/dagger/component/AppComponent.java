@@ -2,6 +2,7 @@ package com.example.administrator.dagger.dagger.component;
 
 import android.content.Context;
 
+import com.example.administrator.dagger.SpfManager;
 import com.example.administrator.dagger.dagger.module.AppModule;
 import com.example.administrator.dagger.http.ApiService;
 
@@ -17,4 +18,5 @@ import dagger.Component;
 public interface AppComponent {
     Context context();
     ApiService apiService();
+    SpfManager spfManager();
 }

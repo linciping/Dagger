@@ -1,5 +1,7 @@
 package com.example.administrator.dagger.dagger.component;
 
+import android.app.Activity;
+
 import com.example.administrator.dagger.dagger.module.ActivityModule;
 import com.example.administrator.dagger.dagger.scope.ActivityScope;
 
@@ -13,5 +15,8 @@ import dagger.Module;
  */
 @ActivityScope
 @Component(dependencies = AppComponent.class,modules = ActivityModule.class)
-public class ActivityComponent {
+public interface ActivityComponent {
+    Activity activity();
+
+    void inject(Activity activity);
 }

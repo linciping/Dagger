@@ -11,14 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitManager {
 
-    public static final String BASE_URL="";
+    public static final String BASE_URL="http://apis.baidu.com/apistore/";
 
     @Inject
-    public RetrofitManager(){
-
-    }
-
-    public ApiService getApiService(){
+    public static ApiService getApiService(){
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
