@@ -3,7 +3,6 @@ package com.example.administrator.dagger.dagger.module;
 import android.app.Application;
 import android.content.Context;
 
-import com.example.administrator.dagger.SpfManager;
 import com.example.administrator.dagger.http.ApiService;
 import com.example.administrator.dagger.http.RetrofitManager;
 
@@ -33,13 +32,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    ApiService provideApiService(){
-        return RetrofitManager.getApiService();
-    }
-
-    @Provides
-    @Singleton
-    SpfManager provideSpfManager(){
-        return SpfManager.getInstance(application);
+    ApiService provideApiService(RetrofitManager manager){
+        return manager.getApiService();
     }
 }
